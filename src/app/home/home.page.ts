@@ -1,6 +1,15 @@
+
 import { Component, OnInit } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
+
+import {
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+  IonCard,
+  IonCardContent
+} from '@ionic/angular/standalone';
 
 import { WeatherService } from '../services/weather';
 
@@ -9,7 +18,15 @@ import { WeatherService } from '../services/weather';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule]
+  imports: [
+    CommonModule,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonCard,
+    IonCardContent
+  ]
 })
 
 export class HomePage implements OnInit {
@@ -42,7 +59,6 @@ export class HomePage implements OnInit {
 
         temp: temps[index],
 
-        // icon cuaca berdasarkan suhu
         icon: this.getWeatherIcon(temps[index])
 
       }));
@@ -56,19 +72,15 @@ export class HomePage implements OnInit {
     if (temp >= 33) {
       return '☀️';
     }
-
     else if (temp >= 30) {
       return '🌤️';
     }
-
     else if (temp >= 27) {
       return '⛅';
     }
-
     else if (temp >= 24) {
       return '☁️';
     }
-
     else {
       return '🌧️';
     }
