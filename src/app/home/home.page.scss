@@ -1,0 +1,46 @@
+.page-bg {
+  --background: #222831;
+}
+
+.custom-header {
+  --background: #393E46;
+  --color: #DFD0B8;
+}
+
+.info-card {
+  background: #393E46;
+  color: #DFD0B8;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.desc {
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.info-item {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.weather-card {
+  background: #393E46;
+  color: #DFD0B8;
+  border-radius: 16px;
+  margin-bottom: 14px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.temp {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.time {
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.5;
+}

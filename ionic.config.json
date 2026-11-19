@@ -1,0 +1,7 @@
+{
+  "name": "aplikasi-cuaca",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+
+    <ion-title>
+      Perkiraan Cuaca Jakarta
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="page-bg ion-padding">
+
+  <!-- Informasi -->
+  <ion-card class="info-card">
+
+    <ion-card-content>
+
+      <p class="desc">
+        Berikut adalah data prakiraan cuaca wilayah Jakarta
+        berdasarkan API Open-Meteo.
+      </p>
+
+      <div class="info-item">
+        <strong>Lokasi:</strong> Jakarta
+      </div>
+
+      <div class="info-item">
+        <strong>Latitude:</strong> -6.2
+      </div>
+
+      <div class="info-item">
+        <strong>Longitude:</strong> 106.8
+      </div>
+
+      <div class="info-item">
+        <strong>Satuan:</strong> Celsius (°C)
+      </div>
+
+    </ion-card-content>
+
+  </ion-card>
+
+  <!-- Card Cuaca -->
+  <ion-card
+    class="weather-card"
+    *ngFor="let item of weatherData"
+  >
+
+    <ion-card-content>
+
+      <div class="temp">
+
+        {{ item.icon }} {{ item.temp }} °C
+
+      </div>
+
+      <div class="time">
+
+        {{ item.time }}
+
+      </div>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
